@@ -1,0 +1,14 @@
+.sidebar {
+	/* Take up 20% of the screen */
+	width: 240px;
+	/* flex: 0.2; */
+	background-color: #212121 !important;
+}
+
+.sidebar > hr {
+	height: 1px;
+	border: 0;
+	background-color: #ddd;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
