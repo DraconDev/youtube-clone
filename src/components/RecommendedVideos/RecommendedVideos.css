@@ -1,8 +1,6 @@
 .recommendedVideos {
-	/* Take up 80% of the screen */
+	/* Take up rest of the screen */
 	flex: 1;
-	/* border: 1px solid black; */
-	background-color: #181818;
 	padding: 40px 20px;
 	padding-bottom: 0px;
 	/* justify-content: end; */
