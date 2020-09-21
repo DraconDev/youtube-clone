@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import VideoCard from "./../VideoCard/VideoCard";
+import { getHomeVideos } from "./../../axios/axios";
 
 const videoList = [];
+// const videos = getHomeVideos();
 
 // mocking the Youtube API to corrently style videos
 for (let i = 0; i < 12; i++) {
@@ -18,6 +20,19 @@ for (let i = 0; i < 12; i++) {
 }
 
 const VideoCardList = () => {
+	const [videoList2, setVideoList2] = useState([]);
+
+	useEffect(() => {
+		async function setVideoList() {
+			// videoList2 = await getHomeVideos();
+			setVideoList2(await getHomeVideos());
+		}
+		setVideoList();
+		return () => {};
+	}, []);
+
+	console.log("videos", videoList2);
+
 	return <React.Fragment>{videoList}</React.Fragment>;
 };
 
